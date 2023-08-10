@@ -1,0 +1,176 @@
+version: "3.9"
+
+services:
+  #DOTNET 6.0 on Ubuntu 22.10 with FFmpeg 5.1.1
+  dotnet-aspnet-ffmpeg-6.0-kinetic-5.1.1:
+    image: ${DOCKER_REGISTRY-}dotnet/aspnet-ffmpeg:6.0-kinetic-5.1.1
+    build:
+      context: dotnet/aspnet-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "22.10"
+        FFMPEG_VERSION: "5.1.1-1ubuntu2.1"
+        DOTNET_VERSION: "6.0"
+  dotnet-runtime-ffmpeg-6.0-kinetic-5.1.1:
+    image: ${DOCKER_REGISTRY-}dotnet/runtime-ffmpeg:6.0-kinetic-5.1.1
+    build:
+      context: dotnet/runtime-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "22.10"
+        FFMPEG_VERSION: "5.1.1-1ubuntu2.1"
+        DOTNET_VERSION: "6.0"
+  dotnet-sdk-ffmpeg-6.0-kinetic-5.1.1:
+    image: ${DOCKER_REGISTRY-}dotnet/sdk-ffmpeg:6.0-kinetic-5.1.1
+    build:
+      context: dotnet/sdk-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "22.10"
+        FFMPEG_VERSION: "5.1.1-1ubuntu2.1"
+        DOTNET_VERSION: "6.0"
+
+  #DOTNET 7.0 on Ubuntu 22.10 with FFmpeg 5.1.1
+  dotnet-aspnet-ffmpeg-7.0-kinetic-5.1.1:
+    image: ${DOCKER_REGISTRY-}dotnet/aspnet-ffmpeg:7.0-kinetic-5.1.1
+    build:
+      context: dotnet/aspnet-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "22.10"
+        FFMPEG_VERSION: "5.1.1-1ubuntu2.1"
+        DOTNET_VERSION: "7.0"
+  dotnet-runtime-ffmpeg-7.0-kinetic-5.1.1:
+    image: ${DOCKER_REGISTRY-}dotnet/runtime-ffmpeg:7.0-kinetic-5.1.1
+    build:
+      context: dotnet/runtime-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "22.10"
+        FFMPEG_VERSION: "5.1.1-1ubuntu2.1"
+        DOTNET_VERSION: "7.0"
+  dotnet-sdk-ffmpeg-7.0-kinetic-5.1.1:
+    image: ${DOCKER_REGISTRY-}dotnet/sdk-ffmpeg:7.0-kinetic-5.1.1
+    build:
+      context: dotnet/sdk-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "22.10"
+        FFMPEG_VERSION: "5.1.1-1ubuntu2.1"
+        DOTNET_VERSION: "7.0"
+
+  #DOTNET 6.0 on Ubuntu 23.04 with FFmpeg 5.1.2
+  dotnet-aspnet-ffmpeg-6.0-lunar-5.1.2:
+    image: ${DOCKER_REGISTRY-}dotnet/aspnet-ffmpeg:6.0-lunar-5.1.2
+    build:
+      context: dotnet/aspnet-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.04"
+        FFMPEG_VERSION: "5.1.2-3ubuntu1"
+        DOTNET_VERSION: "6.0"
+  dotnet-runtime-ffmpeg-6.0-lunar-5.1.2:
+    image: ${DOCKER_REGISTRY-}dotnet/runtime-ffmpeg:6.0-lunar-5.1.2
+    build:
+      context: dotnet/runtime-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.04"
+        FFMPEG_VERSION: "5.1.2-3ubuntu1"
+        DOTNET_VERSION: "6.0"
+  dotnet-sdk-ffmpeg-6.0-lunar-5.1.2:
+    image: ${DOCKER_REGISTRY-}dotnet/sdk-ffmpeg:6.0-lunar-5.1.2
+    build:
+      context: dotnet/sdk-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.04"
+        FFMPEG_VERSION: "5.1.2-3ubuntu1"
+        DOTNET_VERSION: "6.0"
+
+  #DOTNET 7.0 on Ubuntu 23.04 with FFmpeg 5.1.2
+  dotnet-aspnet-ffmpeg-7.0-lunar-5.1.2:
+    image: ${DOCKER_REGISTRY-}dotnet/aspnet-ffmpeg:7.0-lunar-5.1.2
+    build:
+      context: dotnet/aspnet-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.04"
+        FFMPEG_VERSION: "5.1.2-3ubuntu1"
+        DOTNET_VERSION: "7.0"
+  dotnet-runtime-ffmpeg-7.0-lunar-5.1.2:
+    image: ${DOCKER_REGISTRY-}dotnet/runtime-ffmpeg:7.0-lunar-5.1.2
+    build:
+      context: dotnet/runtime-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.04"
+        FFMPEG_VERSION: "5.1.2-3ubuntu1"
+        DOTNET_VERSION: "7.0"
+  dotnet-sdk-ffmpeg-7.0-lunar-5.1.2:
+    image: ${DOCKER_REGISTRY-}dotnet/sdk-ffmpeg:7.0-lunar-5.1.2
+    build:
+      context: dotnet/sdk-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.04"
+        FFMPEG_VERSION: "5.1.2-3ubuntu1"
+        DOTNET_VERSION: "7.0"
+
+  #DOTNET 6.0 on Ubuntu 23.10 with FFmpeg 6.0
+  dotnet-aspnet-ffmpeg-6.0-mantic-6.0:
+    image: ${DOCKER_REGISTRY-}dotnet/aspnet-ffmpeg:6.0-mantic-6.0
+    build:
+      context: dotnet/aspnet-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.10"
+        FFMPEG_VERSION: "6.0-5ubuntu2"
+        DOTNET_VERSION: "6.0"
+  dotnet-runtime-ffmpeg-6.0-mantic-6.0:
+    image: ${DOCKER_REGISTRY-}dotnet/runtime-ffmpeg:6.0-mantic-6.0
+    build:
+      context: dotnet/runtime-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.10"
+        FFMPEG_VERSION: "6.0-5ubuntu2"
+        DOTNET_VERSION: "6.0"
+  dotnet-sdk-ffmpeg-6.0-mantic-6.0:
+    image: ${DOCKER_REGISTRY-}dotnet/sdk-ffmpeg:6.0-mantic-6.0
+    build:
+      context: dotnet/sdk-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.10"
+        FFMPEG_VERSION: "6.0-5ubuntu2"
+        DOTNET_VERSION: "6.0"
+
+  #DOTNET 7.0 on Ubuntu 23.10 with FFmpeg 6.0
+  dotnet-aspnet-ffmpeg-7.0-mantic-6.0:
+    image: ${DOCKER_REGISTRY-}dotnet/aspnet-ffmpeg:7.0-mantic-6.0
+    build:
+      context: dotnet/aspnet-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.10"
+        FFMPEG_VERSION: "6.0-5ubuntu2"
+        DOTNET_VERSION: "7.0"
+  dotnet-runtime-ffmpeg-7.0-mantic-6.0:
+    image: ${DOCKER_REGISTRY-}dotnet/runtime-ffmpeg:7.0-mantic-6.0
+    build:
+      context: dotnet/runtime-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.10"
+        FFMPEG_VERSION: "6.0-5ubuntu2"
+        DOTNET_VERSION: "7.0"
+  dotnet-sdk-ffmpeg-7.0-mantic-6.0:
+    image: ${DOCKER_REGISTRY-}dotnet/sdk-ffmpeg:7.0-mantic-6.0
+    build:
+      context: dotnet/sdk-ffmpeg
+      dockerfile: Dockerfile
+      args:
+        UBUNTU_VERSION: "23.10"
+        FFMPEG_VERSION: "6.0-5ubuntu2"
+        DOTNET_VERSION: "7.0"
